@@ -1,14 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-
-interface FormData {
-  patientName: string;
-  scheduleDepartment: string;
-  appointmentTime: string;
-  bookingType: string;
-}
+import { Appointment } from "../types/appointment";
 
 const FormBooking = () => {
-  const [formData, setFormData] = useState<FormData | null>(null);
+  const [formData, setFormData] = useState<Appointment | null>(null);
 
   const nameInputRef = useRef<HTMLInputElement>(null);
 
@@ -37,7 +31,7 @@ const FormBooking = () => {
         console.log("dataJsonString:", dataJsonString);
 
         try {
-          const jsonData: FormData = JSON.parse(dataJsonString);
+          const jsonData: Appointment = JSON.parse(dataJsonString);
           console.log("jsonData:", jsonData);
 
           setFormData(jsonData);
