@@ -5,29 +5,27 @@ type FormThaiNationalDataProps = {
 };
 
 const FormThaiNationalData = ({ data }: FormThaiNationalDataProps) => {
-  // console.log("Data in Form:", data);
-
   return (
-    <form className="w-full flex flex-col gap-y-4">
+    <form className="flex flex-col w-full gap-y-4">
       {/* name th */}
-      <div className="flex flex-wrap gap-y-2 my-2 md:my-0">
-        <div className="w-full md:w-1/2 px-3">
-          <label className=" uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+      <div className="flex flex-wrap my-2 gap-y-2 md:my-0">
+        <div className="w-full px-3 md:w-1/2">
+          <label className="mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase ">
             First Name (TH)
           </label>
           <input
-            className="appearance-none  w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            className="w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none focus:outline-none focus:bg-white"
             type="text"
             placeholder="Jane"
             value={data ? `${data.titleTH} ${data.firstNameTH}` : ""}
           />
         </div>
-        <div className="w-full md:w-1/2 px-3">
-          <label className=" uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+        <div className="w-full px-3 md:w-1/2">
+          <label className="mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase ">
             Last Name (TH)
           </label>
           <input
-            className="appearance-none  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
             type="text"
             placeholder="Doe"
             defaultValue={data?.lastNameTH}
@@ -36,24 +34,24 @@ const FormThaiNationalData = ({ data }: FormThaiNationalDataProps) => {
       </div>
 
       {/* name en */}
-      <div className="flex flex-wrap gap-y-2 my-2 md:my-0">
-        <div className="w-full md:w-1/2 px-3">
-          <label className=" uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+      <div className="flex flex-wrap my-2 gap-y-2 md:my-0">
+        <div className="w-full px-3 md:w-1/2">
+          <label className="mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase ">
             First Name (EN)
           </label>
           <input
-            className="appearance-none  w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            className="w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none focus:outline-none focus:bg-white"
             type="text"
             placeholder="Jane"
             value={data ? `${data.titleEN} ${data.firstNameEN}` : ""}
           />
         </div>
-        <div className="w-full md:w-1/2 px-3">
-          <label className=" uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+        <div className="w-full px-3 md:w-1/2">
+          <label className="mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase ">
             Last Name (EN)
           </label>
           <input
-            className="appearance-none  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
             type="text"
             placeholder="Doe"
             defaultValue={data?.lastNameEN}
@@ -64,11 +62,11 @@ const FormThaiNationalData = ({ data }: FormThaiNationalDataProps) => {
       {/* id */}
       <div className="flex flex-wrap">
         <div className="w-full px-3">
-          <label className=" uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+          <label className="mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase ">
             Citizen ID
           </label>
           <input
-            className="appearance-none  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
             type="text"
             defaultValue={data?.citizenId}
             disabled
@@ -79,11 +77,11 @@ const FormThaiNationalData = ({ data }: FormThaiNationalDataProps) => {
       {/* address */}
       <div className="flex flex-wrap">
         <div className="w-full px-3">
-          <label className=" uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+          <label className="mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase ">
             Address
           </label>
           <textarea
-            className="appearance-none  w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
             value={data?.address ?? ""}
           />
         </div>
